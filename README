@@ -2,6 +2,8 @@
 
 * Introduction
 
+SRFI Package for Chez Scheme of Arch Linux. Prebuilt Packages can be downloaded at [release](https://github.com/shih-liang/chez-srfi/releases).
+
 This is a minor modification of the SRFI collection available at
 https://github.com/arcfide/chez-srfi (itself derived from
 https://launchpad.net/scheme-libraries).  The modifications are aimed
@@ -12,4 +14,5 @@ See srfi/README for the original description.
 
 * Build Instructions
 
-Please see the instructions in srfi/INSTALL.chez.
+`yaourt -S chez-srfi`
+
