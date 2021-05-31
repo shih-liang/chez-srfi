@@ -1,6 +1,4 @@
-# -*- mode: org -*-
-
-* Introduction
+# Introduction
 
 SRFI Package for Chez Scheme of Arch Linux. Prebuilt Packages can be downloaded at [release](https://github.com/shih-liang/chez-srfi/releases).
 
@@ -12,7 +10,7 @@ environment.
 
 See srfi/README for the original description.
 
-* Build Instructions
+# Build Instructions
 
 `yaourt -S chez-srfi`
 
