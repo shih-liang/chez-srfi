@@ -30,7 +30,7 @@
 (define (compile-and-link-file file)
   (let* ((file-no-ext (path-last (path-root file)))
          (target (string-append file-no-ext ".so"))
-         (link (string-append ":"
+         (link (string-append "%3a"
                               (substring file 3 (string-length file-no-ext))
                               ".so")))
     (compile-library file)

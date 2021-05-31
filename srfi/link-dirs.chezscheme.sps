@@ -33,7 +33,7 @@
        (string=? "%3a" (substring file 0 3))))
 
 (define (link-file file)
-  (let ([clean (string-append ":" (substring file 3 (string-length file)))])
+  (let ([clean (string-append "%3a" (substring file 3 (string-length file)))])
 	(printf "Linking ~a~n" file)
 	(system (format "ln -sf '~a' '~a'" file clean))))
 
