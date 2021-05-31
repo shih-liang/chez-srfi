@@ -9,4 +9,4 @@
   (srfi private include)
   (srfi :64 testing))
 
-(include/resolve ("srfi" "%3a64") "srfi-64-test.scm")
+(include/resolve ("srfi" ":64") "srfi-64-test.scm")

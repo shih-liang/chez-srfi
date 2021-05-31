@@ -175,5 +175,5 @@
                                               set-date-year!
                                               set-date-zone-offset!
                                               tm:local-tz-offset))))
-    (include/resolve ("srfi" "%3a19") "srfi-19.scm"))
+    (include/resolve ("srfi" ":19") "srfi-19.scm"))
 )

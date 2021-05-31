@@ -28,5 +28,5 @@
 
   (let-syntax ((define (vanish-define define (check:write check:mode))))
     (SRFI-23-error->R6RS "(library (srfi :78 lightweight-testing))"
-     (include/resolve ("srfi" "%3a78") "check.scm")))
+     (include/resolve ("srfi" ":78") "check.scm")))
 )

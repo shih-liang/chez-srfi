@@ -9,4 +9,4 @@
   (srfi private include)
   (srfi :78 lightweight-testing))
 
-(include/resolve ("srfi" "%3a78") "examples.scm")
+(include/resolve ("srfi" ":78") "examples.scm")

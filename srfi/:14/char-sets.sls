@@ -56,5 +56,5 @@
     (char->integer c))
 
   (SRFI-23-error->R6RS "(library (srfi :14 char-sets))"
-   (include/resolve ("srfi" "%3a14") "srfi-14.scm"))
+   (include/resolve ("srfi" ":14") "srfi-14.scm"))
 )

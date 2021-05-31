@@ -14,11 +14,8 @@
 # TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 # PERFORMANCE OF THIS SOFTWARE.
 
-PACKAGE = chez-srfi
-VERSION = 1.0
-
 CHEZ = chez-scheme
-INSTALL = install -D
+INSTALL = install -D -m644
 
 PREFIX = /usr/local
 EXEC_PREFIX = ${PREFIX}
@@ -29,14 +26,11 @@ DATAROOTDIR = ${PREFIX}/share
 DATADIR = ${DATAROOTDIR}
 MANDIR = ${DATAROOTDIR}/man
 INFODIR = ${DATAROOTDIR}/info
-DOCDIR = ${DATAROOTDIR}/doc/${PACKAGE}-${VERSION}
 
 chezversion ::= $(shell echo '(call-with-values scheme-version-number (lambda (a b c) (format #t "~d.~d.~d" a b c)))' | ${CHEZ} -q)
 schemedir = ${LIBDIR}/csv${chezversion}-site
 
 build:
-	(cd srfi/%3a2 && ln -sf and-let%2a.sls and-let\*.sls)
-	(cd srfi && $(CHEZ) --program link-dirs.chezscheme.sps)
 	(cd srfi && $(CHEZ) --program compile-all.chezscheme.ss)
 
 clean:
@@ -45,19 +39,18 @@ clean:
 
 install:
 	find srfi -type f -regex ".*.so" -exec sh -c '${INSTALL} -t ${schemedir}/$$(dirname $$1) $$1' _ {} \;
-	${INSTALL} -t ${DOCDIR} srfi/README
-	cp -P srfi/:[0-9] ${schemedir}/srfi
-	cp -P srfi/:[0-9][0-9] ${schemedir}/srfi
-	cp -P srfi/:[0-9]*.so ${schemedir}/srfi
+	cp -rP srfi/:[0-9] ${schemedir}/srfi
+	cp -rP srfi/:[0-9][0-9] ${schemedir}/srfi
+	cp -rP srfi/:[0-9]*.so ${schemedir}/srfi
 
 install-src:
 	find srfi -type f -regex ".*.s\(ls\|cm\)" -exec sh -c '${INSTALL} -t ${schemedir}/$$(dirname $$1) $$1' _ {} \;
-	cp -P srfi/:[0-9] ${schemedir}/srfi
-	cp -P srfi/:[0-9][0-9] ${schemedir}/srfi
-	cp -P srfi/:[0-9]*.sls ${schemedir}/srfi
+	cp -rP srfi/:[0-9] ${schemedir}/srfi
+	cp -rP srfi/:[0-9][0-9] ${schemedir}/srfi
+	cp -rP srfi/:[0-9]*.sls ${schemedir}/srfi
 
 test:
-	$(CHEZ) --program srfi/tests/and-let%2a.sps
+	$(CHEZ) --program srfi/tests/and-let*.sps
 	$(CHEZ) --program srfi/tests/lists.sps
 	$(CHEZ) --program srfi/tests/cut.sps
 	$(CHEZ) --program srfi/tests/intermediate-format-strings.sps

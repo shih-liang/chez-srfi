@@ -41,7 +41,7 @@
           (exports (list-sort symbol<?
                               (environment-symbols (environment lib-name))))
           (alias-name `(srfi ,(string->symbol (format ":~d" srfi-num))))
-          (out-file (format "%3a~d.sls" srfi-num)))
+          (out-file (format ":~d.sls" srfi-num)))
      (cond
        ((file-exists? out-file)
         (printf "Skipping ~a because it already exists.\n" out-file))

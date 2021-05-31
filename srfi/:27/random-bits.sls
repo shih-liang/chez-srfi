@@ -34,6 +34,6 @@
     (time-nanosecond (current-time)))
 
   (SRFI-23-error->R6RS "(library (srfi :27 random-bits))"
-   (include/resolve ("srfi" "%3a27") "mrg32k3a-a.scm")
-   (include/resolve ("srfi" "%3a27") "mrg32k3a.scm"))
+   (include/resolve ("srfi" ":27") "mrg32k3a-a.scm")
+   (include/resolve ("srfi" ":27") "mrg32k3a.scm"))
 )

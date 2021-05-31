@@ -66,5 +66,5 @@
         (vanish-define define-syntax
          (receive))))
     (SRFI-23-error->R6RS "(library (srfi :43 vectors))"
-     (include/resolve ("srfi" "%3a43") "vector-lib.scm")))
+     (include/resolve ("srfi" ":43") "vector-lib.scm")))
 )

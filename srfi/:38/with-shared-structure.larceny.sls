@@ -1,6 +1,6 @@
 ;;; SRFI 38: External Representation of Data With Shared Structure
 ;;;
-;;; $Id: %3a38.sls 6149 2009-03-19 02:41:56Z will $
+;;; $Id: :38.sls 6149 2009-03-19 02:41:56Z will $
 ;;;
 ;;; See <http://srfi.schemers.org/srfi-38/srfi-38.html> for the full document.
 ;;;

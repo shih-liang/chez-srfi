@@ -86,7 +86,7 @@
             (immutable shp array:shape)))
 
   (SRFI-23-error->R6RS "(library (srfi :25 multi-dimensional-arrays))"
-   (include/resolve ("srfi" "%3a25") "ix-ctor.scm")
-   (include/resolve ("srfi" "%3a25") "op-ctor.scm")
-   (include/resolve ("srfi" "%3a25") "array.scm"))
+   (include/resolve ("srfi" ":25") "ix-ctor.scm")
+   (include/resolve ("srfi" ":25") "op-ctor.scm")
+   (include/resolve ("srfi" ":25") "array.scm"))
 )

@@ -31,8 +31,8 @@
   ;; pass all provided tests! (FBE)
   
   ;; (SRFI-23-error->R6RS "(library (srfi :67 compare-procedures))"
-  ;;  (include/resolve ("srfi" "%3a67") "compare.scm"))
+  ;;  (include/resolve ("srfi" ":67") "compare.scm"))
 
-  (include/resolve ("srfi" "%3a67") "compare.scm")
+  (include/resolve ("srfi" ":67") "compare.scm")
 
 )

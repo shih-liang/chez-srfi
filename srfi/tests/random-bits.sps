@@ -14,7 +14,7 @@
 
 (define ascii->char integer->char)
 
-(include/resolve ("srfi" "%3a27") "conftest.scm")
+(include/resolve ("srfi" ":27") "conftest.scm")
 
 (check-mrg32k3a)
 (display "passed (check-mrg32k3a)\n")

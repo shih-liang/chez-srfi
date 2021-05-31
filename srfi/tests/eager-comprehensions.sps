@@ -18,4 +18,4 @@
 (define (my-call-with-input-file filename thunk)
   (call-with-input-file filename thunk))
 
-(include/resolve ("srfi" "%3a42") "examples.scm")
+(include/resolve ("srfi" ":42") "examples.scm")

@@ -18,7 +18,7 @@
                         (begin))
                        ((_ (check-all) (for-each check '((equal? expr val) ...)))
                         (begin (check expr => val) ...)))))
-  (include/resolve ("srfi" "%3a26") "check.scm"))
+  (include/resolve ("srfi" ":26") "check.scm"))
 
 ;;;; free-identifier=? of <> and <...>
 

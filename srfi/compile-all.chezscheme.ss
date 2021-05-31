@@ -23,20 +23,11 @@
               (and (file-regular? file)
                    (not (file-symbolic-link? file))
                    (< 3 str-length)
-                   (string=? (substring file 0 3) "%3a")
+                   (string=? (substring file 0 1) ":")
                    (string=? (substring file (- str-length 4) str-length) ".sls"))))
           (directory-list root)))
-
-(define (compile-and-link-file file)
-  (let* ((file-no-ext (path-last (path-root file)))
-         (target (string-append file-no-ext ".so"))
-         (link (string-append "%3a"
-                              (substring file 3 (string-length file-no-ext))
-                              ".so")))
-    (compile-library file)
-    (system (format "ln -sf '~a' '~a'" target link))))
 
 (parameterize ((library-directories '((".." . "..")))
                (source-directories '(".."))
                (compile-imported-libraries #t))
-  (map compile-and-link-file (libraries-to-compile ".")))
+  (map compile-library (libraries-to-compile ".")))

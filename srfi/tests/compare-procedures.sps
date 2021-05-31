@@ -11,4 +11,4 @@
   (srfi private include)
   (srfi :67 compare-procedures))
 
-(include/resolve ("srfi" "%3a67") "examples.scm")
+(include/resolve ("srfi" ":67") "examples.scm")

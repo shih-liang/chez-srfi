@@ -10,5 +10,5 @@
 
   (define-auxiliary-keywords <> <...>)
   
-  (include/resolve ("srfi" "%3a26") "cut.scm")  
+  (include/resolve ("srfi" ":26") "cut.scm")  
 )

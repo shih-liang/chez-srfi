@@ -16,6 +16,6 @@
                 ((_ expr (error msg))
                  (check expr => #T))
                 ((_ . r) (or . r)))))
-  (include/resolve ("srfi" "%3a25") "list.scm"))
+  (include/resolve ("srfi" ":25") "list.scm"))
 
 (check-report)

@@ -38,6 +38,6 @@
 
   (define args-fold
     (let ((option make-option))
-      (include/resolve ("srfi" "%3a37") "srfi-37-reference.scm")
+      (include/resolve ("srfi" ":37") "srfi-37-reference.scm")
       args-fold))
 )

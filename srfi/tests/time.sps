@@ -9,7 +9,7 @@
   (srfi private include)
   (srfi :19 time))
 
-(include/resolve ("srfi" "%3a19") "srfi-19-test-suite.scm")
+(include/resolve ("srfi" ":19") "srfi-19-test-suite.scm")
 
 (define (printf fmt-str . args)
   (display (apply format fmt-str args)))

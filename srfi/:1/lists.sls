@@ -72,5 +72,5 @@
 
   (let-syntax ((define (vanish-define define (cons*))))
     (SRFI-23-error->R6RS "(library (srfi :1 lists))"
-     (include/resolve ("srfi" "%3a1") "srfi-1-reference.scm")))
+     (include/resolve ("srfi" ":1") "srfi-1-reference.scm")))
 )

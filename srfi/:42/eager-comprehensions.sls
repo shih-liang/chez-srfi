@@ -31,10 +31,10 @@
 
   ;; (let-syntax ((define (vanish-define define (:-dispatch))))
   ;;   (SRFI-23-error->R6RS "(library (srfi :42 eager-comprehensions))"
-  ;;    (include/resolve ("srfi" "%3a42") "ec.scm")))
+  ;;    (include/resolve ("srfi" ":42") "ec.scm")))
 
   (let-syntax ((define (vanish-define define (:-dispatch))))
-    (include/resolve ("srfi" "%3a42") "ec.scm"))
+    (include/resolve ("srfi" ":42") "ec.scm"))
 
   (define :-dispatch-param (make-parameter (make-initial-:-dispatch)))
   
