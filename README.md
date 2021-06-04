@@ -18,8 +18,8 @@ See srfi/README for the original description.
 
 Example:
 ```
-(library-directories "/usr/lib/csv9.5.4-site/")
-(import (srfi :42 eager-comprehensions))
-(list-ec (: i 5) (* i i))
-=> (0 1 4 9 16)
+> (library-directories "/usr/lib/csv9.5.4-site/")
+> (import (srfi :42 eager-comprehensions))
+> (list-ec (: i 5) (* i i))
+(0 1 4 9 16)
 ```
